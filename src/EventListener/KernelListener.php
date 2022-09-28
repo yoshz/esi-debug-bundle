@@ -19,6 +19,11 @@ class KernelListener
         $response = $event->getResponse();
         $request  = $event->getRequest();
 
+        // ignore sub requests
+        if ($event->getRequestType() === HttpKernelInterface::SUB_REQUEST) {
+            return;
+        }
+
         // ignore non fragment requests
         if ($this->fragmentPath !== rawurldecode($request->getPathInfo())) {
             return;
