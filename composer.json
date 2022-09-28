@@ -1,0 +1,21 @@
+{
+    "name": "yoshz/esi-debug-bundle",
+    "description": "A Symfony bundle that displays debug information for ESI requests.",
+    "keywords": ["esi", "symfony"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yosh de Vos",
+            "homepage": "https://yoshz.nl"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "^4.4"
+    },
+    "autoload": {
+        "psr-4": { 
+            "Yoshz\\EsiDebugBundle\\": "src/" 
+        }
+    }
+}
